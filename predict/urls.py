@@ -1,5 +1,8 @@
 from django.urls import path, include
 from predict import views
+from django.views.static import serve
+from django.conf.urls import url
+from django.conf import settings
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -10,4 +13,8 @@ urlpatterns = [
     path('team/', views.team, name='team'),
     path('about/', views.about, name='about'),
     path('cam_front/', views.cam_front, name='cam_front'),
+    url(r'^media/(?P<path>.*)$', serve,
+        {'document_root':       settings.MEDIA_ROOT}),
+    url(r'^static/(?P<path>.*)$', serve,
+        {'document_root': settings.STATIC_ROOT})
 ]
