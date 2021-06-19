@@ -25,7 +25,7 @@ SECRET_KEY = 'e(p2g9_!*0j)b&e$9$b1mnfv$u!g%_()=$55nt6e9+qoq68kwf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', ]
+ALLOWED_HOSTS = ['127.0.0.1', "parleywebapp.herokuapp.com"]
 
 
 # Application definition
